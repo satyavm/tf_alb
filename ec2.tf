@@ -21,7 +21,7 @@ resource "aws_instance" "webserver" {
   yum -y install httpd
   systemctl start httpd
   systemctl enable httpd
-  echo "This website 1" > /var/www/html/index.html
+  echo "<h1> THIS IS my test website </h1>" > /var/www/html/index.html
   EOF
   tags = {
     Name  = "webserver"
